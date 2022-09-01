@@ -100,9 +100,9 @@ export const main = Reach.App(() => {
 
             const address = bid > lastBid ? this : Auctioneer
              const highestbid =bid >lastBid? bid :lastBid
-            //  if(bid < lastBid){
-            //   transfer(bid).to(this);
-            //  }
+             if(balance() >= bid){
+              transfer(bid).to(this)
+             }
             // transfer(bid).to(this)
              const value=bid >lastBid ?true :false
              k(value)
